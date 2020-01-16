@@ -2,7 +2,7 @@ import os
 from csv import reader, writer
 import re
 
-text_file = os.path.join(r'python-challenge\Resources\alice_in_wonderland.txt')
+text_file = os.path.join(r'python-challenge\pyparagraph\alice_in_wonderland.txt')
 
 with open (text_file, "r",encoding = 'utf-8') as txt_f:
     alice = txt_f.read()
@@ -48,7 +48,7 @@ print(average_sent_len(alice))
 
 # print(alice)
 
-with open(r"python-challenge\Resources\Py_Paragraph_output.txt","w") as file:
+with open(r"python-challenge\pyparagraph\Py_Paragraph_output.txt","w") as file:
     py_paragraph_write = writer(file)
     py_paragraph_write.writerow([title()])
     py_paragraph_write.writerow([approx_word_count(alice)])

@@ -1,7 +1,7 @@
 import os
 from csv import DictReader, writer
 
-budget_csv = os.path.join('python-challenge\pybank\budget_data.csv')
+budget_csv = os.path.join(r'python-challenge\pybank\Resources\budget_data.csv')
 b_date = []
 b_pl = []
 with open (budget_csv, "r") as csv_f:
@@ -36,7 +36,9 @@ print(average(b_pl))
 print(greatest_inc(b_date))
 print(greatest_dec(b_date))
 
-with open("python-challenge\Resources\Budget_output.csv","w") as file:
+
+budget_output_csv = os.path.join(r'python-challenge\pybank\Resources\Budget_output.csv')
+with open(budget_output_csv,"w") as file:
     budget_write = writer(file)
     budget_write.writerow([title()])
     budget_write.writerow([total_months(b_date)])

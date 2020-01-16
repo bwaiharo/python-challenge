@@ -5,7 +5,7 @@ import operator
 
 # Path to collect data from the Resources folder
 
-py_poll_csv = os.path.join(r'python-challenge\Resources\Election_data.csv')
+py_poll_csv = os.path.join(r'python-challenge\pypoll\election_data.csv')
 voter = []
 candidate = []
 county = []
@@ -42,7 +42,7 @@ print(title())
 print(total_votes(voter))
 print(tabulation(candidate,voter))
 
-with open(r"python-challenge\Resources\Py_poll_output.csv","w") as file:
+with open(r"python-challenge\pypoll\Py_poll_output.csv","w") as file:
     py_poll_write = writer(file)
     py_poll_write.writerow([title()])
     py_poll_write.writerow([total_votes(voter)])
