@@ -103,7 +103,7 @@ us_state_abbrev = {
     'Wyoming': 'WY',
 
 }
-emp_csv = os.path.join(r'python-challenge\pyboss\Resources\employee_data.csv')
+# emp_csv = os.path.join(r'python-challenge\pyboss\Resources\employee_data.csv')
 e_name = []
 e_dob = []
 e_id = []
@@ -111,7 +111,7 @@ e_ssn = []
 e_state = []
 first = []
 last = []
-with open (emp_csv, "r") as csv_f:
+with open ("pyboss/Resources/employee_data.csv", "r") as csv_f:
     emp_file = DictReader(csv_f)
 
     for e_row in emp_file:
@@ -159,7 +159,7 @@ def ssn_star(ssn):
     return new_ssn
     
 data = zip(emp_id(),name_split_first(e_name),name_split_last(e_name),date_fo_bitrh(e_dob),ssn_star(e_ssn),state_abv(us_state_abbrev,e_state))
-with open(r"python-challenge\pyboss\Resources\Py_boss_output.csv","w", newline='') as pyfile:
+with open("pyboss/Resources/Py_boss_output.csv","w", newline='') as pyfile:
     py_boss_write = writer(pyfile)
     py_boss_write.writerow(header())
     for w in data:
