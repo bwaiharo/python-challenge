@@ -9,7 +9,7 @@ import operator
 voter = []
 candidate = []
 county = []
-with open('pypoll/election_data.csv',"r") as py_file:
+with open('python-challenge/pypoll/election_data.csv',"r") as py_file:
     py_poll = DictReader(py_file)
     for p_reader in py_poll:
         voter.append(p_reader["Voter ID"])
@@ -42,7 +42,7 @@ print(title())
 print(total_votes(voter))
 print(tabulation(candidate,voter))
 
-with open("pypoll/Py_poll_output.csv","w") as file:
+with open("python-challenge/pypoll/Py_poll_output.csv","w") as file:
     py_poll_write = writer(file)
     py_poll_write.writerow([title()])
     py_poll_write.writerow([total_votes(voter)])

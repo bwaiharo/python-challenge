@@ -4,7 +4,7 @@ from csv import DictReader, writer
 # budget_csv = os.path.join(r'python-challenge\pybank\Resources\budget_data.csv')
 b_date = []
 b_pl = []
-with open ("pybank/Resources/budget_data.csv", "r") as csv_f:
+with open ("python-challenge/pybank/Resources/budget_data.csv", "r") as csv_f:
     budget_file = DictReader(csv_f)
     # next(csv_file)
     for b_row in budget_file:
@@ -38,7 +38,7 @@ print(greatest_dec(b_date))
 
 
 # budget_output_csv = os.path.join(r'python-challenge\pybank\Resources\Budget_output.csv')
-with open("pybank/Resources/Budget_output.csv","w") as file:
+with open("python-challenge/pybank/Resources/Budget_output.csv","w") as file:
     budget_write = writer(file)
     budget_write.writerow([title()])
     budget_write.writerow([total_months(b_date)])
